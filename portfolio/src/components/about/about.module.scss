@@ -1,0 +1,98 @@
+.about {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    grid-template-rows: repeat(4, minmax(10rem, 1fr));
+
+    position: relative;
+    padding: 25rem 0;
+
+    .image {
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        figure {
+            width: 113%;
+            height: 100%;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                border: 2px solid var(--primary);
+            }
+        }
+        figure:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            background: var(--img);
+            height: 100%;
+            width: 100%;
+            top: 5rem;
+            left: -13rem;
+            z-index: -1;
+        }
+    }
+
+    .info {
+        position: absolute;
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        top: 7.5rem;
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 500;
+            color: var(--primary);
+            position: relative;
+            right: 3rem;
+        }
+        h2::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            background: var(--text);
+            height: 3px;
+            width: 30rem;
+            top: -1rem;
+            right: 0;
+        }
+        p {
+            font-size: 1.7rem;
+            font-weight: 300;
+            line-height: 1.7;
+            width: 46rem;
+            color: var(--text);
+            position: relative;
+            top: 2rem;
+            left: 2rem;
+        }
+    }
+
+    // WHO AM I text // with position absolute
+    .backgroundText {
+        position: absolute;
+        z-index: -1;
+        color: var(--aboutText);
+        font-size: 25rem;
+        font-weight: 500;
+    }
+    .backgroundText.who {
+        letter-spacing: 15rem;
+        top: 3rem;
+        right: 0rem;
+    }
+    .backgroundText.am {
+        bottom: 0;
+        left: 20rem;
+    }
+
+    .backgroundText.i {
+        bottom: 7rem;
+        right: 22rem;
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../assets/scss/base.scss";
+.header {
+    position: fixed;
+    background: var(--bg);
+    transition: background 0.4s ease;
+    z-index: 100;
+    .nav {
+        height: 10rem;
+        // background: orangered;
+        width: 107rem;
+        margin: 0 auto;
+        display: flex;
+
+        .navItems {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .moon,
+            .sun {
+                height: 5rem;
+                cursor: pointer;
+            }
+            .moon {
+                margin-right: auto;
+            }
+            .sun {
+            }
+
+            a {
+                font-size: var(--fontSizeMedium);
+                margin-right: 15rem;
+                color: var(--text);
+                text-decoration: none;
+                span {
+                    margin-left: 0.8rem;
+                }
+            }
+        }
+    }
+}
