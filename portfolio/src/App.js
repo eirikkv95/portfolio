@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './assets/scss/base.scss';
 import classes from './app.module.scss'
 import Navigation from './components/navigation/navigation';

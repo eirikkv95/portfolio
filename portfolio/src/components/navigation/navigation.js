@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classes from './navigation.module.scss'
+import './navigation.scss';
 import { ReactComponent as Moon } from '../../assets/svg/moon.svg';
 import { ReactComponent as Sun } from '../../assets/svg/sun.svg';
 import ArrowDown from '../../assets/svg/navArrow.js';
@@ -8,15 +9,45 @@ import ArrowDown from '../../assets/svg/navArrow.js';
 
 function Navigation(props) {
 
+    const links = [
+        {
+            id: 1,
+            name: 'home'
 
-    console.log(props.theme)
+        },
+        {
+            id: 2,
+            name: 'about'
+        }
+    ];
+    const [activeLink, setActiveLink] = useState(1);
+
+    const handleClass = (id) => {
+        setActiveLink(id);
+    }
+
     return (
         <div className={classes.header}>
             <nav className={classes.nav}>
                 <div className={classes.navItems}>
                     <Moon className={classes.moon} />
-                    <a href="#">HOME</a>
-                    <a href="#">ABOUT <span><ArrowDown /></span></a>
+                    {
+                        links.map(link => {
+                            return (
+                                <a
+                                    key={link.id}
+                                    href="#"
+                                    onClick={() => { handleClass(link.id) }}
+                                    className={`navigation-${link.name}`}>
+                                    {link.name}
+                                    {
+                                        link.id === activeLink ? (<span className={classes.span}></span>) : ("")
+                                    }
+                                </a>
+                            )
+                        })
+                    }
+
 
                     <Sun className={classes.sun} onClick={props.toggleTheme} />
 
@@ -30,3 +61,5 @@ function Navigation(props) {
 
 
 export default Navigation;
+
+
