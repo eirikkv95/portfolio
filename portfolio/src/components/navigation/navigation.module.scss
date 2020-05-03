@@ -16,12 +16,11 @@
             width: 100%;
             display: flex;
             align-items: center;
-            .moon,
             .sun {
                 height: 5rem;
                 cursor: pointer;
             }
-            .moon {
+            .od {
                 margin-right: auto;
             }
             // .sun {

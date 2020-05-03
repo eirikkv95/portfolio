@@ -1,24 +1,24 @@
 :root {
     // Dark mode
     --primaryDark: #9474c4;
-    --bgDark: #121212;
-    --textDark: #f5f5f5;
-    --whoDark: rgba(251, 251, 251, 0.03);
-    --aboutSectionDark: #1d1d1d;
-    --whoAmItextDark: rgba(251, 251, 251, 3%);
-
-    // Light mode
-
     --primaryLight: #b15050;
+    --bgDark: #121212;
     --bgLight: #f2f2f2;
+    --textDark: #f5f5f5;
     --textLight: #575050;
-    --textLightLighter: #f2f2f2;
+    --whoDark: rgba(251, 251, 251, 0.03);
     --whoLight: rgba(0, 0, 0, 0.03);
+    --aboutSectionDark: #1d1d1d;
     --aboutSectionLight: #b15050;
     --whoAmItextLight: rgba(0, 0, 0, 0.085);
+    --whoAmItextDark: rgba(251, 251, 251, 3%);
+
+    --textLightLighter: #f2f2f2;
 
     // Font variables
+    --fontSizeBig: 2.5rem;
     --fontSizeMedium: 1.7rem;
+    --fontSizeSmall: 1.4rem;
     // margin variables
 
     // padding variables

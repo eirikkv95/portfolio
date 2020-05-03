@@ -1,5 +1,34 @@
+@import "../../assets/scss/base.scss";
 .gallary {
     grid-column: 1/-1;
     grid-row: 4/5;
     padding: 20rem 0;
+    overflow: hidden;
+    .direction {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .images {
+        display: flex;
+        width: 2160px;
+        position: relative;
+
+        .imageDiv {
+            position: relative;
+        }
+        .image {
+            width: 720px;
+            height: 450px;
+            margin-right: 60px;
+        }
+        .text {
+            position: absolute;
+            top: 12.4rem;
+            left: 62rem;
+            width: 30rem;
+            background: var(--bg);
+            padding: 4rem;
+        }
+    }
 }

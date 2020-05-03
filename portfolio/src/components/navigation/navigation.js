@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classes from './navigation.module.scss'
 import './navigation.scss';
-import { ReactComponent as Moon } from '../../assets/svg/moon.svg';
+
 import { ReactComponent as Sun } from '../../assets/svg/sun.svg';
-import ArrowDown from '../../assets/svg/navArrow.js';
+import Od from '../logo/logo';
+
 
 
 
@@ -30,7 +31,7 @@ function Navigation(props) {
         <div className={classes.header}>
             <nav className={classes.nav}>
                 <div className={classes.navItems}>
-                    <Moon className={classes.moon} />
+                    <Od />
                     {
                         links.map(link => {
                             return (
