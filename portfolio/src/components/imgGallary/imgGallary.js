@@ -7,6 +7,7 @@ import Coding from '../../assets/images/coding.jpg'
 import ImgCard from './imgCard/imgCard';
 import RightArrow from '../../assets/svgComponents/rightArrow.js';
 import LeftArrow from '../../assets/svgComponents/leftArrow.js';
+import ImgNumber from './imgNumber/imgNumber';
 
 const ImageGallary = () => {
     const [speed, setSpeed] = useState(.6);
@@ -56,12 +57,13 @@ const ImageGallary = () => {
                 </div>
             </div>
             <div className={classes.images}>
-                {images.map(current => {
+                {images.map(image => {
                     return (
-                        <div className={classes.imageDiv} key={current.index}>
-                            <img src={current.img} alt="" className={classes.image} />
+                        <div className={classes.imageDiv} key={image.index}>
+                            <img src={image.img} alt="" className={classes.image} />
 
-                            <ImgCard text={current} />
+                            <ImgCard text={image} />
+                            <ImgNumber number={image} />
 
                         </div>
                     )

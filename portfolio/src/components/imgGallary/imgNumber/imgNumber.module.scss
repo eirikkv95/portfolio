@@ -1,0 +1,10 @@
+@import "../../../assets/scss/base.scss";
+.imgNumber {
+    font-size: var(--fontSizeBig);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--primary);
+    background: var(--bg);
+    width: 4rem;
+}
