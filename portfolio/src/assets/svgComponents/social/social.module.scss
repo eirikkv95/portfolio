@@ -1,0 +1,59 @@
+.twitter,
+.instagram,
+.linkedIn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.twitter a,
+.instagram a,
+.linkedIn a {
+    color: var(--primary);
+    font-size: var(--fontSizeSmall);
+    padding-left: 4rem;
+    transform: translateX(-27rem);
+    opacity: 0;
+    text-decoration: none;
+}
+.twitter:hover a {
+    animation: showLink 0.5s ease-in forwards;
+}
+.instagram:hover a {
+    animation: showLink 0.5s ease-in forwards;
+}
+.linkedIn:hover a {
+    animation: showLink 0.5s ease-in forwards;
+}
+.twitter svg {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--text);
+}
+.instagram svg {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--text);
+}
+.linkedIn svg {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--text);
+}
+
+// Animation
+
+@keyframes showLink {
+    0% {
+        opacity: 0;
+        transform: translateX(-27rem);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

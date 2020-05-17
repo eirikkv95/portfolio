@@ -1,13 +1,22 @@
 .about {
-    grid-column: 1/-1;
+    grid-column: 2/6;
     grid-row: 3/4;
     display: grid;
-    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    grid-template-columns: repeat(2, minmax(1rem, 1fr));
     grid-template-rows: repeat(4, minmax(10rem, 1fr));
 
     position: relative;
     padding: 25rem 0;
 
+    @media (max-width: 850px) {
+        padding: 15rem 0;
+    }
+
+    @media (max-width: 640px) {
+        grid-template-columns: repeat(2, minmax(1rem, 1fr));
+        grid-template-rows: repeat(2, minmax(10rem, 20rem));
+        justify-items: center;
+    }
     .image {
         grid-column: 1/2;
         grid-row: 1/-1;
@@ -15,14 +24,38 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media (max-width: 1020px) {
+            transform: translate(-33%, -50%);
+        }
+        @media (max-width: 780px) {
+            transform: translate(-50%, -50%);
+        }
+        @media (max-width: 640px) {
+            grid-column: 1/3;
+            grid-row: 1/2;
+            justify-self: center;
+            margin-bottom: 2r;
+            transform: none;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
         figure {
             width: 113%;
             height: 100%;
             position: relative;
+            @media (max-width: 640px) {
+                width: 100%;
+            }
             img {
                 width: 100%;
                 height: 100%;
                 border: 2px solid var(--primary);
+                @media (max-width: 640px) {
+                    border: none;
+                    object-fit: contain;
+                }
             }
         }
         figure:after {
@@ -35,6 +68,14 @@
             top: 5rem;
             left: -13rem;
             z-index: -1;
+
+            @media (max-width: 860px) {
+                left: -6rem;
+                top: 3rem;
+            }
+            @media (max-width: 640px) {
+                display: none;
+            }
         }
     }
 
@@ -43,6 +84,14 @@
         grid-column: 2/3;
         grid-row: 1/-1;
         top: 7.5rem;
+        @media (max-width: 780px) {
+            top: 12.5rem;
+        }
+        @media (max-width: 640px) {
+            grid-column: 1/-1;
+            grid-row: 2/3;
+            top: 0;
+        }
 
         h2 {
             font-size: 4rem;
@@ -50,6 +99,13 @@
             color: var(--primary);
             position: relative;
             right: 3rem;
+            @media (max-width: 1020px) {
+                font-size: 3rem;
+                right: 0rem;
+            }
+            @media (max-width: 640px) {
+                text-align: center;
+            }
         }
         h2::before {
             content: " ";
@@ -60,9 +116,17 @@
             width: 30rem;
             top: -1rem;
             right: 0;
+
+            @media (max-width: 1020px) {
+                width: 25rem;
+            }
+            @media (max-width: 640px) {
+                content: none;
+            }
         }
         p {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
+            font-family: Roboto Mono;
             font-weight: 300;
             line-height: 1.7;
             width: 46rem;
@@ -70,6 +134,23 @@
             position: relative;
             top: 2rem;
             left: 2rem;
+            @media (max-width: 1020px) {
+                font-size: 1.4rem;
+                width: 35rem;
+            }
+
+            @media (max-width: 860px) {
+                font-size: 1.2rem;
+                width: 29rem;
+            }
+            @media (max-width: 780px) {
+                font-size: 1rem;
+                width: 25rem;
+            }
+            @media (max-width: 640px) {
+                width: auto;
+                left: 0;
+            }
         }
     }
 
@@ -80,19 +161,43 @@
         color: var(--aboutText);
         font-size: 25rem;
         font-weight: 500;
+        @media (max-width: 1020px) {
+            font-size: 20rem;
+        }
+        @media (max-width: 860px) {
+            font-size: 15rem;
+        }
+        @media (max-width: 860px) {
+            display: none;
+        }
     }
     .backgroundText.who {
         letter-spacing: 15rem;
         top: 3rem;
         right: 0rem;
+        @media (max-width: 1020px) {
+            right: -9rem;
+        }
+        @media (max-width: 860px) {
+            right: -15rem;
+            top: 12rem;
+        }
     }
     .backgroundText.am {
         bottom: 0;
         left: 20rem;
+        @media (max-width: 1020px) {
+            bottom: 11rem;
+            left: 10rem;
+        }
     }
 
     .backgroundText.i {
         bottom: 7rem;
         right: 22rem;
+        @media (max-width: 1020px) {
+            bottom: 15rem;
+            right: 15rem;
+        }
     }
 }

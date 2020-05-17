@@ -6,6 +6,10 @@ import Header from './components/header/header'
 import About from './components/about/about';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import ImageGallary from './components/imgGallary/imgGallary';
+import Gif from './components/gif/gif';
+import Shape from './assets/svgComponents/shape';
+import SocialMedia from './components/socialMedia/socialMedia';
+
 
 function App() {
 
@@ -16,11 +20,13 @@ function App() {
   if (theme) {
     body.classList.add(theme);
   }
+
   const toggleTheme = () => {
 
     if (body.classList.contains('darkMode')) {
       body.classList.replace('darkMode', 'lightMode');
       localStorage.setItem('theme', 'lightMode');
+      localStorage.setItem('donk', 'life')
     } else {
       body.classList.replace('lightMode', 'darkMode');
       localStorage.setItem('theme', 'darkMode');
@@ -28,14 +34,20 @@ function App() {
   }
 
   return (
-    <div className={classes.layout}>
-      <Navigation toggleTheme={toggleTheme} theme={theme} />
-      <ParallaxProvider>
-        <Header />
-        <About />
-        <ImageGallary />
-      </ParallaxProvider>
-    </div>
+    <>
+      <div className={classes.layout}>
+        <Navigation toggleTheme={toggleTheme} theme={theme} />
+        <ParallaxProvider>
+          <Header />
+          <About />
+          <ImageGallary />
+          <Gif />
+        </ParallaxProvider>
+      </div>
+      <SocialMedia />
+      <Shape theme={theme} />
+
+    </>
   );
 }
 

@@ -6,11 +6,10 @@ const Header = () => {
     return (
         <section className={classes.header}>
             <div className={classes.heading}>
-                Velkommen til ØD
+                Welcome to ØD
             </div>
             <div className={classes.paragraph}>
-                This is truly your time to shine bright like a diamond & we will not dissapoint
-                because you are who you are!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae impedit facere doloribus aspernatur placeat accusantium voluptates voluptate fugiat sed consequatur fugit
             </div>
             <div className={classes.button}>
                 <p>Get To Know Me</p>

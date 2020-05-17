@@ -1,0 +1,8 @@
+.shape {
+    display: grid;
+    justify-content: flex-end;
+
+    @media (max-width: 1020px) {
+        display: none;
+    }
+}

@@ -2,4 +2,8 @@
     height: 5rem;
     cursor: pointer;
     margin-right: auto;
+
+    @media (max-width: 860px) {
+        height: 4rem;
+    }
 }
