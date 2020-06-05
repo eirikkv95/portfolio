@@ -17,6 +17,9 @@
         width: 27rem;
         padding: 2rem;
     }
+    @media (max-width: 640px) {
+        left: 2rem;
+    }
 
     h3 {
         color: var(--primary);

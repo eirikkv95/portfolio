@@ -1,0 +1,37 @@
+.socialBox {
+    display: flex;
+
+    .twitter,
+    .instagram,
+    .linkedIn {
+        display: flex;
+        align-items: center;
+    }
+    .twitter,
+    .instagram {
+        padding-right: 2rem;
+    }
+
+    .twitter a,
+    .instagram a,
+    .linkedIn a {
+        color: var(--primary);
+        font-size: var(--fontSizeSmall);
+        text-decoration: none;
+    }
+    .twitter svg {
+        height: 4rem;
+        width: 4rem;
+        fill: var(--text);
+    }
+    .instagram svg {
+        height: 4rem;
+        width: 4rem;
+        fill: var(--text);
+    }
+    .linkedIn svg {
+        height: 4rem;
+        width: 4rem;
+        fill: var(--text);
+    }
+}

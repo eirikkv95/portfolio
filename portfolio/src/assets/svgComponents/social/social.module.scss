@@ -11,19 +11,7 @@
 .linkedIn a {
     color: var(--primary);
     font-size: var(--fontSizeSmall);
-    padding-left: 4rem;
-    transform: translateX(-27rem);
-    opacity: 0;
     text-decoration: none;
-}
-.twitter:hover a {
-    animation: showLink 0.5s ease-in forwards;
-}
-.instagram:hover a {
-    animation: showLink 0.5s ease-in forwards;
-}
-.linkedIn:hover a {
-    animation: showLink 0.5s ease-in forwards;
 }
 .twitter svg {
     height: 4rem;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import classes from './about.module.scss';
 import Eirik from '../../assets/images/eirikNew.jpg'
 
@@ -8,9 +9,10 @@ const About = () => {
 
     return (
         <section className={classes.about}>
+
             <div className={classes.image}>
                 <figure>
-                    <img src={Eirik} alt="Image of Eirik Kalvø Vattøy" />
+                    <img src={Eirik} alt="bilde of Eirik Kalvø Vattøy" />
                 </figure>
             </div>
 
@@ -28,6 +30,7 @@ const About = () => {
             <div className={`${classes.backgroundText} ${classes.i}`}>
                 <p>I</p>
             </div>
+
         </section>
     );
 }

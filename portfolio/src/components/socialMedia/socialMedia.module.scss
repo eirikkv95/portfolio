@@ -1,13 +1,10 @@
 .social {
     position: fixed;
-    top: 55%;
+    top: 40%;
     left: 2rem;
     animation: show 1s ease forwards;
     // transform: translate(0, -50%);
 
-    @media (max-width: 1020px) {
-        top: 72%;
-    }
     @media (max-width: 640px) {
         display: none;
     }

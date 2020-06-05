@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import classes from './navigation.module.scss'
 import './navigation.scss';
 
@@ -16,10 +16,6 @@ function Navigation(props) {
         {
             id: 1,
             name: 'home'
-        },
-        {
-            id: 2,
-            name: 'about'
         }
     ];
 
@@ -43,7 +39,7 @@ function Navigation(props) {
 
                                 <a
                                     key={link.id}
-                                    href="#"
+                                    href="./"
                                     onClick={() => { handleClass(link.id) }}
                                     className={`navigation-${link.name}`}>
                                     {link.name}
@@ -56,15 +52,21 @@ function Navigation(props) {
 
                         })
                     }
-                    <div className={classes.hamburger} onClick={toggleSideNav} >
-                        <span className={classes.bars}></span>
-                    </div>
-
-
+                    {sideDrawerOpen ?
+                        (
+                            <div className={classes.crosses} onClick={toggleSideNav} >
+                                <span className={classes.cross}></span>
+                            </div>
+                        ) :
+                        (
+                            <div className={classes.hamburger} onClick={toggleSideNav} >
+                                <span className={classes.bars}></span>
+                            </div>
+                        )}
                     <Sun className={classes.sun} onClick={props.toggleTheme} />
-
                 </div>
             </nav>
+
             <SideNav links={links} sideDrawerOpen={sideDrawerOpen} toggle={toggleSideNav} />
 
         </div>

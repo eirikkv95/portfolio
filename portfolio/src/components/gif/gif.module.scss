@@ -13,6 +13,9 @@
         @media (max-width: 780px) {
             font-size: 4.5rem;
         }
+        @media (max-width: 640px) {
+            font-size: 3rem;
+        }
     }
     form {
         margin: 4rem 0;
@@ -22,6 +25,11 @@
             padding: 1rem 4rem;
             margin-right: 0.8rem;
             font-size: var(--fontSizeMedium);
+
+            @media (max-width: 640px) {
+                padding: 0.7rem 2.7rem;
+                font-size: var(--fontSizeSmall);
+            }
         }
         button {
             border: none;
@@ -30,6 +38,12 @@
             color: #f5f5f5;
             font-size: var(--fontSizeMedium);
             cursor: pointer;
+
+            @media (max-width: 640px) {
+                padding: 0.7rem 2.7rem;
+                font-size: var(--fontSizeSmall);
+            }
+
             &:hover {
                 background: var(--primaryHover);
             }

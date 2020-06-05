@@ -40,11 +40,11 @@ const Gif = () => {
 
     console.log(results);
 
-    const getStatus = () => {
-        if (results === "") {
-            return ''
-        }
-    }
+    // const getStatus = () => {
+    //     if (results === "") {
+    //         return ''
+    //     }
+    // }
     return (
         <div className={classes.gif}>
             <h2>The Gif Generator</h2>

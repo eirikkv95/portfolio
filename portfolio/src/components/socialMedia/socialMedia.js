@@ -25,19 +25,13 @@ const SocialMedia = () => {
     }, [position])
     // console.log(position)
 
-    return position >= 0.99 ? (
+    return (
         <div className={classes.social}>
             <Twitter />
             <Instagram />
             <LinkedIn />
         </div>)
-        : (
-            <div className={classes.socialMedia}>
-                <Twitter />
-                <Instagram />
-                <LinkedIn />
-            </div>
-        )
+
 
 }
 

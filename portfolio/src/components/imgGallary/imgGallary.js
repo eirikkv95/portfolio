@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import classes from './imgGallary.module.scss'
 
 import Volleyball from '../../assets/images/volleyball.jpg'
@@ -10,8 +10,6 @@ import LeftArrow from '../../assets/svgComponents/leftArrow.js';
 import ImgNumber from './imgNumber/imgNumber';
 
 const ImageGallary = () => {
-    const [speed, setSpeed] = useState(.6);
-
     const [images, setImages] = useState(
         [
             {

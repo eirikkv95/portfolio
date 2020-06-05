@@ -1,21 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classes from './sideNav.module.scss';
-
+import Social from './socialNav/social';
 
 const SideNav = (props) => {
-
-
-
 
     return props.sideDrawerOpen ? (
         <div className={classes.sideNav}>
             <div className={classes.links}>
                 <ul>
                     <li>
-                        <a href="#" onClick={props.toggle}>Home</a>
-                        <a href="#" onClick={props.toggle}>About</a>
+                        <a href="./" onClick={props.toggle}>Home</a>
                     </li>
                 </ul>
+
+                <Social />
+
             </div>
         </div>
     ) :
