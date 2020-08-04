@@ -3,7 +3,6 @@ import classes from './imgGallary.module.scss'
 
 import Volleyball from '../../assets/images/volleyball.jpg'
 import Gaming from '../../assets/images/gaming.jpg'
-import Coding from '../../assets/images/coding.jpg'
 import ImgCard from './imgCard/imgCard';
 import RightArrow from '../../assets/svgComponents/rightArrow.js';
 import LeftArrow from '../../assets/svgComponents/leftArrow.js';
@@ -17,23 +16,17 @@ const ImageGallary = () => {
                 "nr": 1,
                 "img": Volleyball,
                 'heading': 'Volleyball for NTNUI-Gjøvik',
-                "text": 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ex harum id dolorem sapiente unde rem, eaque consequatur quasi consectetur nihil nisi aut! Consequuntur, facere architecto. Placeat quisquam iste iure?'
+                "text": 'Startet å spille volleball for NTNUI-Gjøvik høsten 2018. Ble med på mange forskjellige turneringer rundt om i oslo området og laget gjorde en god jobb i serien.'
 
             },
             {
                 "index": 1,
                 "nr": 2,
                 'img': Gaming,
-                "heading": "Gaming is one of my hobbies",
-                "text": 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ex harum id dolorem sapiente unde rem, eaque consequatur quasi consectetur nihil nisi aut! Consequuntur, facere architecto. Placeat quisquam iste iure?'
+                "heading": "Gaming ",
+                "text": 'Gaming har vært en stor del av oppveksten og det hele startet med pokemon. Det har blitt mye fifa men i 2017 sa det stopp og jeg fikk øynene opp for single player spill. Top 3 spill: Bloodborne, sekiro og Dark souls'
             },
-            {
-                'index': 2,
-                "nr": 3,
-                'img': Coding,
-                "heading": 'Where did it start?',
-                'text': "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ex harum id dolorem sapiente unde rem, eaque consequatur quasi consectetur nihil nisi aut! Consequuntur, facere architecto. Placeat quisquam iste iure?"
-            }
+
         ]
     )
     const nextImage = () => {
@@ -47,13 +40,7 @@ const ImageGallary = () => {
 
     return (
         <div className={classes.gallary}>
-            <div className={classes.direction}>
 
-                <div>
-                    <LeftArrow nextImage={nextImage} />
-                    <RightArrow prevImage={prevImage} />
-                </div>
-            </div>
             <div className={classes.images}>
                 {images.map(image => {
                     return (
@@ -66,6 +53,13 @@ const ImageGallary = () => {
                         </div>
                     )
                 })}
+            </div>
+            <div className={classes.direction}>
+
+                <div>
+                    <LeftArrow nextImage={nextImage} />
+                    <RightArrow prevImage={prevImage} />
+                </div>
             </div>
 
         </div>

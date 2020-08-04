@@ -1,21 +1,18 @@
 import React from 'react';
 import classes from './header.module.scss';
 
-// General scroll to element function
 
 const Header = () => {
 
     return (
         <section className={classes.header}>
             <div className={classes.heading}>
-                Welcome to ØD
+                <h1>ØD</h1>
             </div>
             <div className={classes.paragraph}>
-                Sorry for the dust! We know it’s taking a while but sit tight and we’ll be with you soon
+                <p>Heisann! Mitt navn er Eirik og jeg har nylig fullført bachelorgraden min i Webutvikling ved NTNU Gjøvik, og begynner dermed jakten på min første jobb som nyutdannet webutvikler. </p>
             </div>
-            <div className={classes.button}>
-                <p>Get To Know Me</p>
-            </div>
+
         </section>
 
     );

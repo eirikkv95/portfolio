@@ -1,14 +1,17 @@
-import React from 'react';
-
+import React, { useRef } from 'react';
 import classes from './about.module.scss';
 import Eirik from '../../assets/images/eirikNew.jpg'
 
 
 const About = () => {
 
+    let section = useRef("");
+
+
+    console.log(section);
 
     return (
-        <section className={classes.about}>
+        <section className={classes.about} ref={section}>
 
             <div className={classes.image}>
                 <figure>
@@ -17,8 +20,10 @@ const About = () => {
             </div>
 
             <div className={classes.info}>
-                <h2>Who Am I</h2>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam obcaecati nihil quas doloribus. Fuga officia deleniti cum maxime reiciendis nesciunt ad animi unde nobis, pariatur eum, dolorum sapiente, necessitatibus tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, nobis? Ex voluptatibus vero, dicta </p>
+                <h2>Hvem er jeg</h2>
+                <p>Jeg er en 25 år gammel mann fra Ulsteinvik som er spesielt interessert i ✨UI✨ og vil gjerne gjøre internett bedre for alle. Jeg har en Bachelor i Web Utvikling og er for øyeblikket på jakt etter min første jobb som nyutdannet webutvikler. </p>
+
+                <p>Jeg vil anse meg selv som en lojal, avslappet og samarbeidsvillig person som liker en utfordring. Selv om jeg kan være litt sjenert i starten, blir jeg fort varm i trøya.</p>
 
             </div>
             <div className={`${classes.backgroundText} ${classes.who}`}>
@@ -38,4 +43,3 @@ const About = () => {
 export default About;
 
 
-// Kar frå Ulsteinvik. I denne perioden er jeg på utkikk etter jobb innen webutvikling. Begeistret for front-end utvikling og spesielt UI(User Interface). Studerer på Gjøvik og bacheloren er ferdig til sommeren. Oslo er byen jeg håper å få meg jobb. Til syvende og sist så prøver jeg å finne ut hva jeg gjør her på denne kloden
