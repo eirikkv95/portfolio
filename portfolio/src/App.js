@@ -4,10 +4,10 @@ import classes from './app.module.scss'
 import Navigation from './components/navigation/navigation';
 import Header from './components/header/header'
 import About from './components/about/about';
-import { ParallaxProvider } from 'react-scroll-parallax';
+
 import ImageGallary from './components/imgGallary/imgGallary';
 import Gif from './components/gif/gif';
-import Shape from './assets/svgComponents/shape';
+
 import SocialMedia from './components/socialMedia/socialMedia';
 
 
@@ -37,16 +37,12 @@ function App() {
     <>
       <div className={classes.layout}>
         <Navigation toggleTheme={toggleTheme} theme={theme} />
-        <ParallaxProvider>
           <Header />
           <About />
           <ImageGallary />
           <Gif />
-        </ParallaxProvider>
       </div>
       <SocialMedia />
-      <Shape theme={theme} />
-
     </>
   );
 }
