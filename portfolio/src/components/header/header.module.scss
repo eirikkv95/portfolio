@@ -1,7 +1,8 @@
 .header {
     grid-column: 2/6;
     grid-row: 2/ 3;
-
+    opacity: 0;
+    animation: showHeader 1s .2s forwards cubic-bezier(0,0,.39,2);
     // margin-top: 5rem;
 
     display: grid;
@@ -81,5 +82,16 @@
         justify-self: center;
         position: relative;
         z-index: 1;
+    }
+}
+
+@keyframes showHeader {
+    0%{
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }

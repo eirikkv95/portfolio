@@ -177,6 +177,7 @@
         letter-spacing: 15rem;
         top: 3rem;
         right: 0rem;
+        animation: leftToRight 6s forwards alternate infinite;
         @media (max-width: 1020px) {
             right: -9rem;
         }
@@ -188,6 +189,7 @@
     .backgroundText.am {
         bottom: 0;
         left: 20rem;
+        animation: rightToLeft 6s forwards alternate infinite ;
         @media (max-width: 1020px) {
             bottom: 11rem;
             left: 10rem;
@@ -201,5 +203,27 @@
             bottom: 15rem;
             right: 15rem;
         }
+    }
+}
+
+
+@keyframes leftToRight{
+    0%{
+        transform: translateX(-5rem);
+    }
+  
+    100%{
+        transform: translateX(5rem);
+    }
+}
+
+
+@keyframes rightToLeft{
+    0%{
+        transform: translateX(5rem);
+    }
+  
+    100%{
+        transform: translateX(-5rem);
     }
 }
