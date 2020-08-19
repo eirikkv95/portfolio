@@ -1,42 +1,47 @@
 @import "../../../assets/scss/base.scss";
 .cardBox {
-    color: var(--text);
-    position: absolute;
-    top: 5rem;
-    background: var(--bg);
-    width: 34rem;
-    right: -8rem;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content;
-    padding: 3rem 4rem;
-    grid-gap: 2rem;
-    @media (max-width: 1020px) {
-        right: -3rem;
-        width: 27rem;
-        padding: 2rem;
-    }
-    @media (max-width: 640px) {
-        left: 2rem;
-    }
+  color: rgb(238, 238, 238);
+  position: absolute;
+  top: 5rem;
+  //   background: var(--bg);
+  backdrop-filter: blur(4rem);
+  background: rgba(var(--blurBg), 0.3);
+  border-radius: 2.2rem;
+  width: 34rem;
+  right: -8rem;
+  z-index: 10;
+  box-shadow: 0 1rem 2rem rgba(var(--blurBg), 0.25);
 
-    h3 {
-        color: var(--primary);
-        font-size: var(--fontSizeBig);
-        letter-spacing: 0.1rem;
-        @media (max-width: 1020px) {
-            font-size: var(--fontSizeSmall);
-        }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content;
+  padding: 3rem 4rem;
+  grid-gap: 2rem;
+  @media (max-width: 1020px) {
+    right: -3rem;
+    width: 27rem;
+    padding: 2rem;
+  }
+  @media (max-width: 640px) {
+    left: 2rem;
+  }
+
+  h3 {
+    color: white;
+    font-size: var(--fontSizeBig);
+    letter-spacing: 0.1rem;
+    @media (max-width: 1020px) {
+      font-size: var(--fontSizeSmall);
     }
-    p {
-        font-size: var(--fontSizeSmall);
-        letter-spacing: 0.1rem;
-        font-family: Roboto Mono;
-        font-size: 1.2rem;
-        line-height: 1.5;
-        @media (max-width: 1020px) {
-            font-size: 1rem;
-        }
+  }
+  p {
+    font-size: var(--fontSizeSmall);
+    letter-spacing: 0.1rem;
+    font-family: Roboto Mono;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    @media (max-width: 1020px) {
+      font-size: 1rem;
     }
+  }
 }
