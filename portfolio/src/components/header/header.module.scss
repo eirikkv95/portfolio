@@ -4,11 +4,24 @@
   opacity: 0;
   position: relative;
   animation: showHeader 1s 0.2s forwards cubic-bezier(0, 0, 0.39, 2);
+  overflow: hidden;
+  border-radius: 2.2rem;
   // margin-top: 5rem;
 
   display: grid;
   grid-template-columns: repeat(5, minmax(10rem, 1fr));
   grid-template-rows: repeat(6, 1fr);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    z-index: 10;
+  }
   @media (max-width: 640px) {
     background-image: none;
     grid-template-columns: 1fr;
@@ -42,7 +55,7 @@
     font-size: 1.5rem;
     text-align: center;
     line-height: 1.5;
-    color: var(--text);
+    color: white;
 
     @media (max-width: 930px) {
       font-size: 1.3rem;
@@ -82,7 +95,7 @@
     grid-column: 2/5;
     justify-self: center;
     position: relative;
-    z-index: 1;
+    z-index: 11;
   }
 }
 

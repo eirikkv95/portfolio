@@ -15,7 +15,7 @@ const Header = () => {
           første jobb som nyutdannet webutvikler.{" "}
         </p>
       </div>
-      {/* <WaveBlur /> */}
+      <WaveBlur />
     </section>
   );
 };

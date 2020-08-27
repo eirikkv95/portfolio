@@ -1,0 +1,52 @@
+.parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  bottom: 100%;
+}
+
+.first {
+  fill: #ad28ad;
+  position: absolute;
+  top: -559px;
+  left: -439px;
+  z-index: 4;
+}
+.second {
+  position: absolute;
+  top: -90px;
+  left: -390px;
+  z-index: 1;
+  fill: #cc2727;
+}
+
+.third {
+  position: absolute;
+  top: 139px;
+  left: -460px;
+  fill: #972bc2;
+}
+.fourth {
+  position: absolute;
+  top: -259px;
+  left: -139px;
+  fill: #2075c5;
+  z-index: 4;
+}
+
+.fifth {
+  position: absolute;
+  top: -149px;
+  left: -249px;
+  z-index: 3;
+  fill: orange;
+}
+
+.sixth {
+  position: absolute;
+  top: -639px;
+  left: -460px;
+
+  fill: rgb(0, 255, 191);
+}
