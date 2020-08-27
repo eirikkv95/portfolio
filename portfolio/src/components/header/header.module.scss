@@ -21,6 +21,8 @@
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(40px);
     z-index: 10;
+    @media (max-width: 640px) {
+    }
   }
   @media (max-width: 640px) {
     background-image: none;
@@ -41,7 +43,7 @@
       font-size: 5rem;
     }
     @media (max-width: 930px) {
-      font-size: 3rem;
+      // font-size: 3rem;
     }
     @media (max-width: 640px) {
       color: var(--primary);

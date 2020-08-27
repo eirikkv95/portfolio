@@ -4,6 +4,9 @@
   left: 0;
   height: 100%;
   bottom: 100%;
+  @media (max-width: 640px) {
+    display: none;
+  }
 }
 
 .first {
