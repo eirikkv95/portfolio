@@ -1,18 +1,18 @@
 .header {
   grid-column: 2/6;
-  grid-row: 2/ 3;
+  grid-row: 1/ 2;
   opacity: 0;
   position: relative;
   animation: showHeader 1s 0.2s forwards cubic-bezier(0, 0, 0.39, 2);
   overflow: hidden;
   border-radius: 2.2rem;
-  // margin-top: 5rem;
+  margin-top: 5rem;
 
   display: grid;
   grid-template-columns: repeat(5, minmax(10rem, 1fr));
   grid-template-rows: repeat(6, 1fr);
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -39,12 +39,6 @@
     font-family: Roboto Mono;
     color: var(--primary);
 
-    @media (max-width: 1214px) {
-      font-size: 5rem;
-    }
-    @media (max-width: 930px) {
-      // font-size: 3rem;
-    }
     @media (max-width: 640px) {
       color: var(--primary);
     }

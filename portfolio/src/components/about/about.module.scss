@@ -61,7 +61,7 @@
       }
     }
     figure:after {
-      content: " ";
+      content: ' ';
       display: block;
       position: absolute;
       background: var(--primary);
@@ -112,7 +112,7 @@
       }
     }
     h2::before {
-      content: " ";
+      content: ' ';
       display: block;
       position: absolute;
       background: var(--text);
@@ -130,7 +130,7 @@
       }
     }
     p {
-      font-size: 1.4rem;
+      font-size: 1.9rem;
       font-family: Roboto Mono;
       font-weight: 300;
       line-height: 1.5;
@@ -164,7 +164,7 @@
   .backgroundText {
     position: absolute;
     z-index: -1;
-    color: var(--aboutText);
+    color: var(--whoAmItext);
     font-size: 25rem;
     font-weight: 500;
     @media (max-width: 1020px) {

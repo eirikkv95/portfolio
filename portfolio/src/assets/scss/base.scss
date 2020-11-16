@@ -1,23 +1,5 @@
 :root {
   // Dark mode
-  --primaryDark: #9474c4;
-  --primaryDarkBg: 148, 116, 196;
-  --primaryDarkHover: #775ca0;
-  --primaryLight: #b15050;
-  --primaryLightBg: 177, 80, 80;
-  --primaryLightHover: #893c3c;
-  --bgDark: #121212;
-  --bgLight: #f2f2f2;
-  --textDark: #f5f5f5;
-  --textLight: #575050;
-  --whoDark: rgba(251, 251, 251, 0.03);
-  --whoLight: rgba(0, 0, 0, 0.03);
-  --aboutSectionDark: #1d1d1d;
-  --aboutSectionLight: #b15050;
-  --whoAmItextLight: rgba(0, 0, 0, 0.085);
-  --whoAmItextDark: rgba(251, 251, 251, 3%);
-
-  --textLightLighter: #f2f2f2;
 
   // Font variables
   --fontSizeBig: 2.5rem;
@@ -50,9 +32,31 @@ html {
 }
 body {
   // font-family
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   background: var(--bg);
   transition: background 0.4s ease;
+}
+body[data-theme='light'] {
+  --primary: #b15050;
+  --primaryBg: 177, 80, 80;
+  --primaryHover: #893c3c;
+  --bg: #f2f2f2;
+  --text: #575050;
+  --who: rgba(0, 0, 0, 0.03);
+  --aboutSection: #b15050;
+  --whoAmItext: rgba(0, 0, 0, 0.085);
+  --textLight: #f2f2f2;
+}
+
+body[data-theme='dark'] {
+  --primary: #9474c4;
+  --primaryBg: 148, 116, 196;
+  --primaryHover: #775ca0;
+  --bg: #121212;
+  --text: #f5f5f5;
+  --who: rgba(251, 251, 251, 0.03);
+  --whoAmItext: rgba(251, 251, 251, 3%);
+  --aboutSection: #1d1d1d;
 }
 
 .darkMode {

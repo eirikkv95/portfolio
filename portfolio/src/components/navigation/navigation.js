@@ -1,81 +1,28 @@
-import React, { useState } from 'react';
-import classes from './navigation.module.scss'
-import './navigation.scss';
+import React from 'react';
+import styled from 'styled-components';
 
-import { ReactComponent as Sun } from '../../assets/svg/sun.svg';
-import Od from '../logo/logo';
-import SideNav from './sideNav/sideNav';
-
-
+import ThemeToggler from './ThemeToggler';
 
 function Navigation(props) {
-    const [activeLink, setActiveLink] = useState(1);
-    const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
-
-    const links = [
-        {
-            id: 1,
-            name: 'home'
-        }
-    ];
-
-    const handleClass = (id) => {
-        setActiveLink(id);
-    }
-
-    const toggleSideNav = () => {
-        setSideDrawerOpen(!sideDrawerOpen);
-    }
-
-    return (
-        <div className={classes.header}>
-            <nav className={classes.nav}>
-                <div className={classes.navItems}>
-                    <Od />
-
-                    {
-                        links.map(link => {
-                            return (
-
-                                <a
-                                    key={link.id}
-                                    href="./"
-                                    onClick={() => { handleClass(link.id) }}
-                                    className={`navigation-${link.name}`}>
-                                    {link.name}
-                                    {
-                                        link.id === activeLink ? (<span className={classes.span}></span>) : ("")
-                                    }
-                                </a>
-
-                            )
-
-                        })
-                    }
-                    {sideDrawerOpen ?
-                        (
-                            <div className={classes.crosses} onClick={toggleSideNav} >
-                                <span className={classes.cross}></span>
-                            </div>
-                        ) :
-                        (
-                            <div className={classes.hamburger} onClick={toggleSideNav} >
-                                <span className={classes.bars}></span>
-                            </div>
-                        )}
-                    <Sun className={classes.sun} onClick={props.toggleTheme} />
-                </div>
-            </nav>
-
-            <SideNav links={links} sideDrawerOpen={sideDrawerOpen} toggle={toggleSideNav} />
-
-        </div>
-    )
+  return (
+    <>
+      <Nav>
+        <Ul>
+          <ThemeToggler />
+        </Ul>
+      </Nav>
+    </>
+  );
 }
-
-
-
 
 export default Navigation;
 
-
+const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem 3rem 0 0;
+`;
+const Ul = styled.ul`
+  display: flex;
+`;
