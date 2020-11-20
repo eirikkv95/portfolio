@@ -1,9 +1,9 @@
 import React from 'react';
-import Class from './blur.module.scss';
+import styled from 'styled-components';
 
 const Blur = (props) => {
   return (
-    <div className={Class.parent}>
+    <Parent>
       <svg
         width="1440"
         height="1140"
@@ -50,8 +50,16 @@ const Blur = (props) => {
           fill="#E00F02"
         />
       </svg>
-    </div>
+    </Parent>
   );
 };
 
 export default Blur;
+
+const Parent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  bottom: 100%;
+`;
