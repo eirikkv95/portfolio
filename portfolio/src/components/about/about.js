@@ -66,7 +66,7 @@ const spin = keyframes`
     transform:rotate(0deg);
   }
   to{
-    transform:rotate(360deg);
+    transform:rotate(359deg);
   }
 `;
 const Ring = styled.img`
@@ -75,7 +75,7 @@ const Ring = styled.img`
   height: 31rem;
   top: -16px;
   left: -15px;
-  animation: ${spin} 80s forwards infinite ease;
+  animation: ${spin} 80s infinite linear;
 `;
 
 const ContentWrapper = styled.div`
