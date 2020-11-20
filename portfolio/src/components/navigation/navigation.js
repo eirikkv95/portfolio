@@ -22,6 +22,7 @@ const Nav = styled.nav`
   top: 0;
   right: 0;
   margin: 1rem 3rem 0 0;
+  z-index: 9999;
 `;
 const Ul = styled.ul`
   display: flex;
