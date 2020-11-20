@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function useLocalStorageState(key, defaultValue = 'light') {
+export default function useLocalStorageState(key, defaultValue = 'dark') {
   const [theme, setTheme] = useState(() => {
     return window.localStorage.getItem(key) || defaultValue;
   });
