@@ -50,7 +50,6 @@ const ContentWrapper = styled.section`
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
-    height: 50vh;
   }
   @media (max-width: 410px) {
   }
@@ -83,7 +82,7 @@ const Paragraph = styled.p`
   }
 
   @media (max-width: 440px) {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 `;
 
