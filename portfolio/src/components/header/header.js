@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { H1 } from '../styles/textstyles';
+
 import Spinn from '../background/spinn';
 
 const Header = () => {
@@ -8,10 +10,10 @@ const Header = () => {
       <Spinn />
       <ContentWrapper>
         <TextContent>
-          <Paragraph>
+          <Heading>
             Hi! I'm <Span> Eirik Kalvø Vattøy</Span>
-          </Paragraph>
-          <Paragraph>Front End Developer</Paragraph>
+          </Heading>
+          <Heading>Front End Developer</Heading>
         </TextContent>
       </ContentWrapper>
     </Wrapper>
@@ -67,10 +69,9 @@ const TextContent = styled.div`
   }
 `;
 
-const Paragraph = styled.p`
+const Heading = styled(H1)`
   text-align: center;
   line-height: 160%;
-  font-size: 4.8rem;
   color: var(--text);
 
   @media (max-width: 980px) {
