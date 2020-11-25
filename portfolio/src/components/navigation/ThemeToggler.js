@@ -11,9 +11,9 @@ const ThemeToggler = () => {
   return (
     <Button onClick={() => setTheme(nextTheme)}>
       {theme === 'light' ? (
-        <img src={Moon} alt="Moon" />
+        <Img src={Moon} alt="Moon" />
       ) : (
-        <img src={Sun} alt="Sun" />
+        <Img src={Sun} alt="Sun" />
       )}
     </Button>
   );
@@ -25,4 +25,9 @@ const Button = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+`;
+
+const Img = styled.img`
+  width: 2.4rem;
+  height: 2.4rem;
 `;
