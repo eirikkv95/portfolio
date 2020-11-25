@@ -4,6 +4,7 @@ import './assets/scss/base.scss';
 import Navigation from './components/navigation/navigation';
 import Header from './components/header/header';
 import About from './components/about/about';
+import Todo from './components/Projects/todo';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navigation />
       <Header />
       <About />
+      <Todo />
     </>
   );
 }
