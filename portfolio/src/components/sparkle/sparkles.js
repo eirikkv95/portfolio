@@ -4,7 +4,6 @@ import usePrefersReducedMotion from '../useHooks/usePrefersReducedMotion';
 import useRandomInterval from '../useHooks/useRandomInterval';
 import styled, { keyframes } from 'styled-components';
 
-// ! read this Boy !  Make the stars hidden when you click them ;)
 const DEFAULT_COLOR = '#FFC700';
 const generateSparkle = (color) => {
   const sparkle = {
