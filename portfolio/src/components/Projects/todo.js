@@ -11,7 +11,7 @@ export default function Todo() {
         <Info>
           <Heading>Todo App</Heading>
           <Paragraph>
-            Procratination is the <Span>thife of time</Span>, meaning that
+            Procratination is the <Span>thief of time</Span>, meaning that
             someone who continually put things off ultimately achives little.
             Time is an essential aspect of our lifes. Procrastination leads to
             loss of precious time. Time once lost, is lost forever. It can never
