@@ -3,13 +3,11 @@ import styled from 'styled-components';
 
 import ThemeToggler from './ThemeToggler';
 
-function Navigation(props) {
+function Navigation() {
   return (
     <>
       <Nav>
-        <Ul>
-          <ThemeToggler />
-        </Ul>
+        <ThemeToggler />
       </Nav>
     </>
   );
@@ -23,7 +21,4 @@ const Nav = styled.nav`
   right: 0;
   margin: 1rem 3rem 0 0;
   z-index: 9999;
-`;
-const Ul = styled.ul`
-  display: flex;
 `;
