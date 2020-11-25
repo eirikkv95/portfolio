@@ -1,0 +1,28 @@
+.spinner {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+}
+
+.spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid transparent;
+  border-top-color: #ad60fa;
+  border-radius: 50%;
+}
+
+.spinner div:nth-child(2) {
+  border: 8px solid transparent;
+  border-bottom-color: #ad60fa;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10rem);
+  }
+}
