@@ -90,13 +90,15 @@ const MockupWrapper = styled.div`
   display: grid;
   justify-content: center;
   position: relative;
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 const Img = styled.img`
   position: relative;
   z-index: 1;
   overflow: hidden;
   width: 100%;
-  height: 100%;
 `;
 const RadialGradient = styled.div`
   position: absolute;
