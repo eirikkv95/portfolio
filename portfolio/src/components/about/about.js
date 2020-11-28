@@ -4,6 +4,7 @@ import { BodyText, H2 } from '../styles/textstyles';
 import Eirik from '../../assets/images/eirikNew.webp';
 import Rings from '../../assets/svg/ring.svg';
 import Loader from '../Loader/loader.js';
+
 const Sparkles = React.lazy(() => import('../sparkle/sparkles'));
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
           </ImageWrapper>
           <Info>
             <HeadingTwo>Who am I</HeadingTwo>
+
             <Paragraph>
               Hi, I'm Eirik, a friendly, 20 something-year-old Front End
               Developer with an educational background in{' '}
@@ -141,8 +143,5 @@ const Paragraph = styled(BodyText)`
 
   @media (max-width: 1020px) {
     font-size: 1.6rem;
-  }
-  @media (max-width: 480px) {
-    font-size: 1.4rem;
   }
 `;

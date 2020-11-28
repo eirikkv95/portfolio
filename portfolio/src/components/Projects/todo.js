@@ -11,7 +11,7 @@ export default function Todo() {
         <Info>
           <Heading>Todo App</Heading>
           <Paragraph>
-            Procratination is the <Span>thief of time</Span>, meaning that
+            Procrastination is the <Span>thief of time</Span>, meaning that
             someone who continually put things off ultimately achives little.
             Time is an essential aspect of our lifes. Procrastination leads to
             loss of precious time. Time once lost, is lost forever. It can never
@@ -20,7 +20,7 @@ export default function Todo() {
           <Paragraph>
             Starting on your task early allows you time to plan better, gather
             information and make modifications or improvments to your work. This
-            will not only eliminate erros but will actually improve the quality
+            will not only eliminate errors but will actually improve the quality
             of your work.
           </Paragraph>
           <TodoButton
@@ -76,10 +76,6 @@ const Paragraph = styled(BodyText)`
 
   @media (max-width: 1020px) {
     font-size: 1.6rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.4rem;
   }
 `;
 const Span = styled.span`
