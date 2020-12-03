@@ -35,7 +35,7 @@ export const I18nContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <I18nContext.Provider value={{ ...state, dispatch }}>
+    <I18nContext.Provider value={{ state, dispatch }}>
       {children}
     </I18nContext.Provider>
   );
