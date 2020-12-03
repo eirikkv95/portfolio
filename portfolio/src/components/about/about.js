@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { BodyText, H2 } from '../styles/textstyles';
 import Eirik from '../../assets/images/eirikNew.webp';
-import Rings from '../../assets/svg/ring.svg';
+import Circle from '../../assets/svg/circle.svg';
 import Loader from '../Loader/loader.js';
 
 const Sparkles = React.lazy(() => import('../sparkle/sparkles'));
@@ -14,7 +14,7 @@ const About = () => {
         <Suspense fallback={<Loader />}>
           <ImageWrapper>
             <Img src={Eirik} alt="Eirik Kalvø Vattøy" />
-            <Ring src={Rings} alt="ring" />
+            <Ring src={Circle} alt="ring" />
           </ImageWrapper>
           <Info>
             <HeadingTwo>Who am I</HeadingTwo>
