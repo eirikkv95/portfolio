@@ -13,7 +13,7 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   background: var(--bg);
-  transition: background 0.4s ease;
+  transition: background 0.2s ease;
 }
 body[data-theme='light'] {
   --primary: #a44a4a;
@@ -24,6 +24,7 @@ body[data-theme='light'] {
   --aboutSection: #b15050;
   --textLight: #f2f2f2;
   --linearBg: rgba(255, 255, 255, 0.6);
+  --soundColor: hsl(0, 0%, 0%);
 }
 
 body[data-theme='dark'] {
@@ -34,4 +35,5 @@ body[data-theme='dark'] {
   --text: #f5f5f5;
   --aboutSection: #1d1d1d;
   --linearBg: rgba(0, 0, 0, 0.6);
+  --soundColor: hsl(0, 0%, 100%);
 }
