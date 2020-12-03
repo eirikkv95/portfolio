@@ -2,18 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import Sun from '../../assets/svg/sun.svg';
 import Moon from '../../assets/svg/moon.svg';
-import useLocalStorageState from '../useHooks/useLocalStorageState';
 
-const ThemeToggler = () => {
-  const [theme, setTheme] = useLocalStorageState('Theme-storage');
-  const nextTheme = theme === 'light' ? 'dark' : 'light';
-
+const ThemeToggler = ({
+  theme,
+  setTheme,
+  nextTheme,
+  handleSound,
+  playMoon,
+  playSun,
+}) => {
   return (
-    <Button onClick={() => setTheme(nextTheme)}>
+    <Button onClick={() => setTheme(nextTheme)} onKeyDown={handleSound}>
       {theme === 'light' ? (
-        <Img src={Moon} alt="Moon" />
+        <Img src={Moon} alt="Moon" onClick={playMoon} />
       ) : (
-        <Img src={Sun} alt="Sun" />
+        <Img src={Sun} alt="Sun" onClick={playSun} />
       )}
     </Button>
   );
@@ -25,6 +28,7 @@ const Button = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  margin-right: 2rem;
 `;
 
 const Img = styled.img`
