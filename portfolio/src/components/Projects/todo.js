@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { H2, BodyText } from '../styles/textstyles';
-import Mockup from '../../assets/svg/mockup.svg';
+import Mockup from '../../assets/svg/RealSilver.svg';
 import TodoButton from '../Buttons/todoButton';
 
 export default function Todo() {
@@ -91,10 +91,11 @@ const MockupWrapper = styled.div`
   }
 `;
 const Img = styled.img`
-  position: relative;
+  position: absolute;
   z-index: 1;
   overflow: hidden;
   width: 100%;
+  height: 100%;
 `;
 const RadialGradient = styled.div`
   position: absolute;
