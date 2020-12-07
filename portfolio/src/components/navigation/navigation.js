@@ -3,16 +3,19 @@ import styled from 'styled-components';
 import useSound from 'use-sound';
 import ThemeToggler from './ThemeToggler';
 import useLocalStorageState from '../useHooks/useLocalStorageState';
-import die from '../sounds/die.mp3';
+import faint from '../sounds/die.mp3';
 import platformJump from '../sounds/platformJump.mp3';
-import MuteSound from './muteSound';
+import Sound from './Sound';
+import MenuToolTip from '../tooltips/MenuTooltip';
+import Burger from './Burger/Burger';
 
-function Navigation() {
+export default function Navigation() {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [theme, setTheme] = useLocalStorageState('Theme');
   const nextTheme = theme === 'light' ? 'dark' : 'light';
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [playMoon] = useSound(die, {
+  const [playMoon] = useSound(faint, {
     volume: 0.1,
     interrupt: true,
     soundEnabled,
@@ -34,29 +37,49 @@ function Navigation() {
       playSun();
     }
   }
+  function toggleBurger() {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <>
       <Nav>
-        <ThemeToggler
-          handleSound={handleSound}
-          theme={theme}
-          setTheme={setTheme}
-          nextTheme={nextTheme}
-          playMoon={playMoon}
-          playSun={playSun}
-        />
-        <MuteSound
-          mute={toggleMute}
-          theme={theme}
-          soundEnabled={soundEnabled}
-        />
+        <Main>
+          <ThemeToggler
+            handleSound={handleSound}
+            theme={theme}
+            setTheme={setTheme}
+            nextTheme={nextTheme}
+            playMoon={playMoon}
+            playSun={playSun}
+          />
+          <Sound
+            toggleMute={toggleMute}
+            theme={theme}
+            soundEnabled={soundEnabled}
+            setSoundEnabled={setSoundEnabled}
+          />
+        </Main>
+        <Secondary>
+          <Burger toggleBurger={toggleBurger} isOpen={isOpen} theme={theme} />
+
+          <MenuToolTip
+            toggleMute={toggleMute}
+            theme={theme}
+            setTheme={setTheme}
+            nextTheme={nextTheme}
+            soundEnabled={soundEnabled}
+            setSoundEnabled={setSoundEnabled}
+            isOpen={isOpen}
+            playMoon={playMoon}
+            playSun={playSun}
+            handleSound={handleSound}
+          />
+        </Secondary>
       </Nav>
     </>
   );
 }
-
-export default Navigation;
 
 const Nav = styled.nav`
   position: fixed;
@@ -66,4 +89,20 @@ const Nav = styled.nav`
   z-index: 9999;
   display: flex;
   align-items: center;
+`;
+
+const Main = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @media (max-width: 680px) {
+    display: none;
+  }
+`;
+
+const Secondary = styled.div`
+  display: none;
+  @media (max-width: 680px) {
+    display: block;
+  }
 `;
