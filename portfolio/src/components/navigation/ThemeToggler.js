@@ -25,10 +25,10 @@ const ThemeToggler = ({
 export default ThemeToggler;
 
 const Button = styled.button`
+  margin-right: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
-  margin-right: 2rem;
 `;
 
 const Img = styled.img`
