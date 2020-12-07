@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Volume from './volume/volume';
-import VolumeNoSound from './volume/noVolume';
+import NoVolume from './volume/noVolume';
 
-const MuteSound = ({ mute, soundEnabled }) => {
+const Sound = ({ toggleMute, soundEnabled }) => {
   return soundEnabled ? (
-    <Button aria-label="unMute" onClick={mute}>
+    <Button aria-label="unMute" onClick={toggleMute}>
       <Volume />
     </Button>
   ) : (
-    <Button aria-label="mute" onClick={mute}>
-      <VolumeNoSound />
+    <Button aria-label="mute" onClick={toggleMute}>
+      <NoVolume />
     </Button>
   );
 };
 
-export default MuteSound;
+export default Sound;
 
 const Button = styled.button`
   width: 1.6rem;
