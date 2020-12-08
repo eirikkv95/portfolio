@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import useSound from 'use-sound';
 import ThemeToggler from './ThemeToggler';
@@ -26,9 +26,6 @@ export default function Navigation() {
     soundEnabled,
   });
 
-  function toggleMute() {
-    setSoundEnabled(!soundEnabled);
-  }
   function handleSound(event) {
     if (theme === 'light' && event.key === 'Enter') {
       playMoon();
@@ -37,13 +34,33 @@ export default function Navigation() {
       playSun();
     }
   }
-  function toggleBurger() {
-    setIsOpen(!isOpen);
-  }
+  const toggleMute = () => setSoundEnabled(!soundEnabled);
+  const toggleBurger = () => setIsOpen(!isOpen);
 
+  const handleClick = (e) => {
+    if (outerRef.current.contains(e.target)) {
+      return;
+    }
+    setIsOpen(false);
+  };
+
+  const outerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) {
+      document.addEventListener('mousedown', handleClick);
+    } else {
+      document.removeEventListener('mousedown', handleClick);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, []);
+
+  console.log(outerRef, isOpen);
   return (
     <>
-      <Nav>
+      <Nav ref={outerRef}>
         <Main>
           <ThemeToggler
             handleSound={handleSound}
@@ -74,6 +91,7 @@ export default function Navigation() {
             playMoon={playMoon}
             playSun={playSun}
             handleSound={handleSound}
+            setIsOpen={setIsOpen}
           />
         </Secondary>
       </Nav>
