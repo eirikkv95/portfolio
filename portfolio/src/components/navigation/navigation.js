@@ -57,7 +57,6 @@ export default function Navigation() {
     };
   }, []);
 
-  console.log(outerRef, isOpen);
   return (
     <>
       <Nav ref={outerRef}>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 const Burger = ({ isOpen, toggleBurger, theme }) => {
+  console.log(theme);
   return (
     <StyledBurger onClick={toggleBurger} isOpen={isOpen} theme={theme}>
       <div></div>
@@ -18,7 +19,7 @@ const StyledBurger = styled.button`
   justify-content: space-around;
   width: 2.5rem;
   height: 2.5rem;
-  background: transparent;
+  background: ${(props) => (props.theme === 'dark' ? '#111827' : '#e6e1ff')};
   border: none;
   cursor: pointer;
   padding: 0;
