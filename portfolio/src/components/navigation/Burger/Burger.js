@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 const Burger = ({ isOpen, toggleBurger, theme }) => {
-  console.log(theme);
   return (
     <StyledBurger onClick={toggleBurger} isOpen={isOpen} theme={theme}>
       <div></div>
