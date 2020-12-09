@@ -1,12 +1,41 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { H2, BodyText } from '../styles/textstyles';
 import Mockup from '../../assets/svg/RealSilver.svg';
 import TodoButton from '../Buttons/todoButton';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Todo() {
+  let wrapper = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+      wrapper,
+      {
+        autoAlpha: 0,
+        y: 200,
+      },
+      {
+        y: 0,
+        duration: 0.6,
+        autoAlpha: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'top top+=600',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  }, []);
   return (
-    <Wrapper>
+    <Wrapper
+      ref={(el) => {
+        wrapper = el;
+      }}
+    >
       <ContentWrapper>
         <Info>
           <Heading>Todo App</Heading>

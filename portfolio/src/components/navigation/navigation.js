@@ -14,6 +14,7 @@ export default function Navigation() {
   const [theme, setTheme] = useLocalStorageState('Theme');
   const nextTheme = theme === 'light' ? 'dark' : 'light';
   const [isOpen, setIsOpen] = useState(false);
+  const outerRef = useRef(null);
 
   const [playMoon] = useSound(faint, {
     volume: 0.1,
@@ -37,23 +38,21 @@ export default function Navigation() {
   const toggleMute = () => setSoundEnabled(!soundEnabled);
   const toggleBurger = () => setIsOpen(!isOpen);
 
-  const handleClick = (e) => {
+  const checkClickOutside = (e) => {
     if (outerRef.current.contains(e.target)) {
       return;
     }
     setIsOpen(false);
   };
 
-  const outerRef = useRef(null);
-
   useEffect(() => {
     if (!isOpen) {
-      document.addEventListener('mousedown', handleClick);
+      document.addEventListener('mousedown', checkClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('mousedown', checkClickOutside);
     }
     return () => {
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('mousedown', checkClickOutside);
     };
   }, []);
 

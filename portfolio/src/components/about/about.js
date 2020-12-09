@@ -1,15 +1,42 @@
-import React, { Suspense } from 'react';
+import React, { useRef, useEffect, Suspense } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { BodyText, H2 } from '../styles/textstyles';
 import Eirik from '../../assets/images/eirikNew.webp';
 import Circle from '../../assets/svg/circle.svg';
 import Loader from '../Loader/loader.js';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Sparkles = React.lazy(() => import('../sparkle/sparkles'));
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+  let wrapper = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      wrapper,
+      {
+        autoAlpha: 0,
+        y: 200,
+      },
+      {
+        y: 0,
+        duration: 0.6,
+        autoAlpha: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'top top+=600',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper ref={(el) => (wrapper = el)}>
       <ContentWrapper>
         <Suspense fallback={<Loader />}>
           <ImageWrapper>

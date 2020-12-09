@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 const Burger = ({ isOpen, toggleBurger, theme }) => {
   return (
-    <StyledBurger onClick={toggleBurger} isOpen={isOpen} theme={theme}>
+    <StyledBurger
+      onClick={toggleBurger}
+      isOpen={isOpen}
+      theme={theme}
+      aria-label="Menu"
+    >
       <div></div>
       <div></div>
       <div></div>
