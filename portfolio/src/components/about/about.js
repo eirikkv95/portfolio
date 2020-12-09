@@ -19,7 +19,7 @@ const About = () => {
       wrapper,
       {
         autoAlpha: 0,
-        y: 200,
+        y: 150,
       },
       {
         y: 0,
