@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   border-radius: 20px;
   padding: 20px;
   position: absolute;
-  top: 50px;
+  top: -111px;
   right: -11px;
   color: white;
   opacity: ${(props) => (props.isOpen ? 1 : 0)};

@@ -105,6 +105,10 @@ const Nav = styled.nav`
   z-index: 9999;
   display: flex;
   align-items: center;
+  @media (max-width: 680px) {
+    top: auto;
+    bottom: 0;
+  }
 `;
 
 const Main = styled.div`
